@@ -1,0 +1,33 @@
+    1  clear
+    2  ls
+    3  mkdir lab1
+    4  ls
+    5  cd lab1/
+    6  cd ..
+    7  cd lab1/
+    8  nano test.c
+    9  nano
+   10  gcc -version
+   11  nano test.c
+   12  gcc test.c -o test
+   13  sudo apt-get install gcc
+   14  gcc test.c -o test
+   15  sudo apt install gcc
+   16  sudo apt update
+   17  sudo apt-get install gcc
+   18  gcc test.c -o test
+   19  nano test.c
+   20  gcc test.c -o test
+   21  ls
+   22  ./test 
+   23  nano test.c
+   24  gcc test.c -o test
+   25  ./test 
+   26  mkdir ~/week1
+   27  cd ~/week1
+   28  ls /usr/bin | grep gcc | sort -r >/ex1.txt
+   29  q
+   30  cd ~/week1
+   31  ls /usr/bin | grep gcc | sort -r > ./ex1.txt
+   32  cat ./ex1.txt
+   33  history > ./ex2.txt
