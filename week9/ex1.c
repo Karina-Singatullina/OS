@@ -6,76 +6,70 @@
 int *address;
 int *state;
 
-int Aging(int a_vrt, int frames_number) {
+int Aging(int frames, int a_vrt) {
 
-    for (int i = 0; i < frames_number; i++) {
+    for (int i = 0; i < frames; i++) {
         if (state[i] != INT_MAX)
             state[i]++;
-    }
-
-    for (int i = 0; i < frames_number; i++) {
-        if (address[i] == a_vrt)
+        if (a_vrt == address[i])
             state[i] = 0;
     }
 
-    int old_page_index = 0;
-    int old_page_age = 0;
+    int prev_age = 0;
+    int prev_ind = 0;
 
-    for (int i = 0; i < frames_number; i++) {
-        if (state[i] > old_page_age)
+    for (int i = 0; i < frames; i++) {
+        if (state[i] > prev_age)
         {
-            old_page_age = state[i];
-            old_page_index = i;
+            prev_ind = i;
+            prev_age = state[i];
         }
     }
-
-    address[old_page_index] = a_vrt;
-    state[old_page_index] = 0;
+    
+    state[prev_ind] = 0;
+    address[prev_ind] = a_vrt;
+    
     return 1;
 }
 
-void readFile()
+void Prepare()
 {
-    FILE *file_input;
-    int N;
-    printf("%s", "Number of page frames: ");
-    scanf("%d", &N);
+    int numb_frames;
+    FILE *file;
+    scanf("%d", &numb_frames);
 
-    address = malloc(sizeof(int) * N);
-    state = malloc(sizeof(int) * N);
+    address = malloc(sizeof(int) * numb_frames);
+    state = malloc(sizeof(int) * numb_frames);
 
-    for (int i = 0; i < N; i++)
-    {
+    for (int i = 0; i < numb_frames; i++) {
         address[i] = -1;
         state[i] = INT_MAX;
     }
 
-    file_input = fopen("Lab09input.txt", "r");
+    file = fopen("Lab09input.txt", "r");
 
-    int arr[1000];
+    int seq[1000];
+
     int i = 0;
-
     int hit = 0;
     int miss = 0;
 
-    while (fscanf(file_input, "%i", &(arr[i])) != EOF)
+    while (fscanf(file, "%i", &(seq[i])) != EOF)
     {
-        if (Aging(arr[i], N) == 0)
-        {
+        if (Aging(numb_frames, seq[i]) == 0)
             hit++;
-        }
-        else {miss++;}
-
+        else
+            miss++;
         i++;
     }
 
-    fclose(file_input);
+    fclose(file);
 
-    printf("Hit: %d\n", hit);
-    printf("Miss: %d\n", miss);
+    printf("Hit: %d\numb_frames", hit);
+    printf("Miss: %d\numb_frames", miss);
 }
 
 int main() {
-    readFile();
+    Prepare();
     return 0;
 }
