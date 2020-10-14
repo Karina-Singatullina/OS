@@ -32,8 +32,10 @@ int Aging(int frames, int a_vrt) {
     return 1;
 }
 
-void Prepare()
-{
+
+
+int main() {
+
     int numb_frames;
     FILE *file;
     scanf("%d", &numb_frames);
@@ -67,9 +69,6 @@ void Prepare()
 
     printf("Hit: %d\numb_frames", hit);
     printf("Miss: %d\numb_frames", miss);
-}
 
-int main() {
-    Prepare();
     return 0;
 }
