@@ -1,0 +1,3 @@
+If there is a sequence without unique numbers k k ... k -> hit/miss ratio is max, 
+as every new page is in page frame. Hit increases and miss is stable. 
+If there is a sequence with unique numbers k k+1 ... k+9 -> hit/miss ratio = 0.
