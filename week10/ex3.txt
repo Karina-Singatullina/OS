@@ -1,0 +1,10 @@
+-rw-r--r-- 1 karina karina  0 Oct 20 20:02 file_ex3.txt
+-rwxr--rwx 1 karina karina   0 Oct 20 20:02 file_ex3.txt
+-rwxrwxrwx 1 karina karina   0 Oct 20 20:02 file_ex3.txt
+
+660 = 110 110 000 = rw- rw- ---
+user(owner) and group can only read and write, other cannot do anything with ex3.txt
+775 = 111 111 101 = rwx rwx r-x
+user(owner) and group have all the permissions (can read, write, execute the ex3.txt), other can only read and execute ex3.txt
+777 = 111 111 111 = rwx rwx rwx
+user(owner), group and other have all the permissions (can read, write, execute the ex3.txt)
