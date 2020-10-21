@@ -2,4 +2,4 @@ inode 258 has 2 links: file1, link1,
 inode 258 has 2 links: file1, link1, 
 
 //I solved task 4 using Repl.it (because of some troubles with wsl) 
-that is why i-node numbers here are not so large as in the task 1 and other.
+that is why i-node numbers here are not so large as in the task 1.
