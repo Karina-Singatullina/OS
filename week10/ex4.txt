@@ -1,0 +1,2 @@
+inode 258 has 2 links: file1, link1, 
+inode 258 has 2 links: file1, link1, 
