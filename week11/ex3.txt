@@ -1,0 +1,9 @@
+1)
+Hello
+Hello
+2)
+Hello
+
+The difference is that in the first program a fork() copies the entire parent program including the buffer. 
+And since we have line buffering, the content of the previous print function is transferred to the child process,
+while in the second program the buffer after the line break becomes empty. And we print empty strings.
