@@ -1,0 +1,39 @@
+buff = 5000
+no sync:
+real    0m0.006s
+user    0m0.002s
+sys 0m0.003s
+
+sync:
+real    0m1.239s
+user    0m0.000s
+sys 0m0.065s
+----------------------
+buff = 1024
+no sync: 
+real    0m0.010s
+user    0m0.000s
+sys 0m0.009s
+
+sync:
+real    0m6.443s
+user    0m0.011s
+sys 0m0.272s
+----------------------
+buff = 50
+no sync:
+real    0m0.267s
+user    0m0.014s
+sys 0m0.080s
+
+sync:
+real    1m59.517s
+user    0m0.091s
+sys 0m5.017s
+---------------------
+buff = 5
+no synx:
+real    0m2.812s
+user    0m0.131s
+sys 0m0.824s
+
